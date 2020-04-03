@@ -107,6 +107,7 @@ namespace CodeFirstDemo
             var p = new Person();
             p.Firstname = "Xander";
             p.Lastname = "Wemmers";
+            p.DateOfBirth = new DateTime(1974, 2, 7);
 
             var t = new Team();
             t.Description = "Pink";
@@ -128,6 +129,26 @@ namespace CodeFirstDemo
             db.Memberships.Add(mem2);
 
             db.SaveChanges();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            db.Database.Delete();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            dg.DataSource = db.People.ToList();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            dg.DataSource = db.Teams.ToList();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            dg.DataSource = db.Memberships.ToList();
         }
     }
 }
