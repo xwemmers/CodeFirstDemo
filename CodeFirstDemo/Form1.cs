@@ -101,5 +101,33 @@ namespace CodeFirstDemo
             cbxCountry.SelectedIndex = -1;
             cbxGender.SelectedIndex = -1;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var p = new Person();
+            p.Firstname = "Xander";
+            p.Lastname = "Wemmers";
+
+            var t = new Team();
+            t.Description = "Pink";
+
+            var t2 = new Team();
+            t2.Description = "Development";
+
+            var mem = new Membership();
+            mem.When = DateTime.Now;
+            mem.Person = p;
+            mem.Team = t;
+
+            var mem2 = new Membership();
+            mem2.Person = p;
+            mem2.Team = t2;
+            mem2.When = DateTime.Now;
+
+            db.Memberships.Add(mem);
+            db.Memberships.Add(mem2);
+
+            db.SaveChanges();
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CodeFirstDemo
 {
-    class Person
+    public class Person
     {
         public int PersonID { get; set; }
         
@@ -28,7 +28,7 @@ namespace CodeFirstDemo
         public string Country { get; set; }
     }
 
-    enum GenderType
+    public enum GenderType
     {
         Male, Female, Unknown
     }

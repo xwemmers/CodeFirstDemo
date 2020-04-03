@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using System.Data.Entity;
+using System.Data.Entity; // Entity Framework
 
 using System.Linq;
 using System.Text;
@@ -14,5 +14,7 @@ namespace CodeFirstDemo
     {
         // Definitie van alle tabellen in de DB
         public DbSet<Person> People { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
     }
 }

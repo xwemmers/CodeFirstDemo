@@ -62,27 +62,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003131426019_InitialCreate.cs" />
-    <Compile Include="Migrations\202003131426019_InitialCreate.designer.cs">
-      <DependentUpon>202003131426019_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003131430370_version2.cs" />
-    <Compile Include="Migrations\202003131430370_version2.designer.cs">
-      <DependentUpon>202003131430370_version2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Membership.cs" />
     <Compile Include="MijnDBContext.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003131426019_InitialCreate.resx">
-      <DependentUpon>202003131426019_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003131430370_version2.resx">
-      <DependentUpon>202003131430370_version2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
