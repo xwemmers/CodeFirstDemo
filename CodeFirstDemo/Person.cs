@@ -26,6 +26,16 @@ namespace CodeFirstDemo
 
         [StringLength(20)]
         public string Country { get; set; }
+
+
+        public virtual ICollection<Membership> Memberships { get; set; }
+
+        
+
+        public override string ToString()
+        {
+            return $"{Firstname} {Lastname}";
+        }
     }
 
     public enum GenderType

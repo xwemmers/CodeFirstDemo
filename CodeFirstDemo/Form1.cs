@@ -48,7 +48,7 @@ namespace CodeFirstDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cbxCountry.DataSource = Enum.GetValues(typeof(GenderType));
+            cbxGender.DataSource = Enum.GetValues(typeof(GenderType));
 
             // Vier regels code voor het ophalen van de web api met landen
             // https://restcountries.eu/rest/v2
@@ -58,7 +58,7 @@ namespace CodeFirstDemo
             // JsonConvert.Deserialize(string)
             // class Country (name, region, capital, population)
 
-            cbxGender.DataSource = new[] { "Nederland", "Belgie" }; 
+            cbxCountry.DataSource = new[] { "Nederland", "Belgie" }; 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -128,6 +128,15 @@ namespace CodeFirstDemo
             db.Memberships.Add(mem);
             db.Memberships.Add(mem2);
 
+            db.Teams.Add(new Team { Description = "Vrijdagmiddagborrel" });
+            db.Teams.Add(new Team { Description = "Training" });
+            db.Teams.Add(new Team { Description = "Schaken" });
+
+            db.People.Add(new Person { Firstname = "Eric", Lastname = "Aarts", DateOfBirth = DateTime.Now });
+            db.People.Add(new Person { Firstname = "Gerlie", Lastname = "Lima Giezen", DateOfBirth = DateTime.Now });
+            db.People.Add(new Person { Firstname = "Ton", Lastname = "Bastianen", DateOfBirth = DateTime.Now });
+            db.People.Add(new Person { Firstname = "Mark", Lastname = "van Assema", DateOfBirth = DateTime.Now });
+
             db.SaveChanges();
         }
 
@@ -148,7 +157,29 @@ namespace CodeFirstDemo
 
         private void button12_Click(object sender, EventArgs e)
         {
-            dg.DataSource = db.Memberships.ToList();
+
+            // Next Exercise:
+
+            // Toon van Team de Description
+            // Toon van Person de Firstname en Lastname
+
+            var query = from m in db.Memberships
+                        select new
+                        {
+                            m.MembershipID,
+                            m.When,
+                            m.Team.Description,
+                            m.Person.Firstname,
+                            m.Person.Lastname
+                        };
+
+            dg.DataSource = query.ToList();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            var form = new AddMembershipForm();
+            form.ShowDialog();
         }
     }
 }

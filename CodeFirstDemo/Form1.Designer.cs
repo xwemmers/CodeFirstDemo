@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.dg = new System.Windows.Forms.DataGridView();
-            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.cbxCountry = new System.Windows.Forms.ComboBox();
@@ -55,6 +53,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,25 +75,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DateOfBirth});
             this.dg.Location = new System.Drawing.Point(8, 389);
             this.dg.Margin = new System.Windows.Forms.Padding(2);
             this.dg.Name = "dg";
             this.dg.RowHeadersWidth = 62;
             this.dg.RowTemplate.Height = 28;
-            this.dg.Size = new System.Drawing.Size(975, 342);
+            this.dg.Size = new System.Drawing.Size(969, 365);
             this.dg.TabIndex = 1;
-            // 
-            // DateOfBirth
-            // 
-            this.DateOfBirth.DataPropertyName = "DateOfBirth";
-            dataGridViewCellStyle5.Format = "dd-MM-yyyy";
-            this.DateOfBirth.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DateOfBirth.HeaderText = "Datum";
-            this.DateOfBirth.MinimumWidth = 8;
-            this.DateOfBirth.Name = "DateOfBirth";
-            this.DateOfBirth.Width = 150;
             // 
             // button2
             // 
@@ -102,7 +89,7 @@
             this.button2.Location = new System.Drawing.Point(385, 151);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(241, 29);
+            this.button2.Size = new System.Drawing.Size(241, 44);
             this.button2.TabIndex = 2;
             this.button2.Text = "Show connectionstring";
             this.button2.UseVisualStyleBackColor = true;
@@ -315,37 +302,48 @@
             // 
             this.button10.Location = new System.Drawing.Point(718, 246);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(258, 23);
             this.button10.TabIndex = 22;
-            this.button10.Text = "button10";
+            this.button10.Text = "Show People";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(718, 276);
+            this.button11.Location = new System.Drawing.Point(718, 286);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(258, 23);
             this.button11.TabIndex = 23;
-            this.button11.Text = "button11";
+            this.button11.Text = "Show Teams";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(718, 306);
+            this.button12.Location = new System.Drawing.Point(718, 321);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.Size = new System.Drawing.Size(258, 23);
             this.button12.TabIndex = 24;
-            this.button12.Text = "button12";
+            this.button12.Text = "Show Memberships";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(718, 350);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(258, 23);
+            this.button13.TabIndex = 25;
+            this.button13.Text = "Add Membership";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 690);
+            this.ClientSize = new System.Drawing.Size(998, 765);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -402,13 +400,13 @@
         private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfBirth;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 

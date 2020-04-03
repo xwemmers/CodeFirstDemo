@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CodeFirstDemo
 {
-    class MijnDBContext : DbContext
+    public class MijnDBContext : DbContext
     {
         // Definitie van alle tabellen in de DB
         public DbSet<Person> People { get; set; }

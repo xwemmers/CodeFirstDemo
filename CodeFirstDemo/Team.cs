@@ -10,5 +10,7 @@ namespace CodeFirstDemo
     {
         public int TeamID { get; set; }
         public string Description { get; set; }
+
+        public virtual ICollection<Membership> Memberships { get; set; }
     }
 }
